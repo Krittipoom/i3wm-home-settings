@@ -215,6 +215,7 @@ bar {
 }
 
 exec_always feh --bg-fill ~/Pictures/Wallpapers/wallpaper01.jpg
+exec_always "setxkbmap -model pc104 -layout us,th -variant ,, -option grp:lwin_toggle"
 exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapButton3=1
 
 
