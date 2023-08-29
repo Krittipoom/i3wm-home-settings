@@ -1,2 +1,3 @@
-# i3wm-home-settings
-configure and settings for i3wm
+# My Ubuntu configuration
+
+including first time setup and bash aliases.
