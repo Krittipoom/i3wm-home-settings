@@ -1,3 +1,6 @@
+# movepackage
+mv ./ubuntu-setup/*.deb ./
+
 # curl
 sudo apt install curl -y
 
@@ -41,7 +44,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # docker desktop
 sudo apt install gnome-terminal
 sudo apt-get update
-sudo apt-get install ./docker-desktop-4.22.1-amd64.deb -y
+#sudo apt-get install ./docker-desktop-4.22.1-amd64.deb -y
 
 # Python3.9 (deadsnake)
 sudo apt install software-properties-common -y
@@ -63,3 +66,9 @@ sudo apt-get update && sudo apt-get install apt-transport-https -y && sudo apt-g
 # Zoom
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb -y
+
+# Vktablet
+sudo apt install ./vktablet-1.0.3-3-x86_64.deb -y
+
+# mysql
+sudo apt install mysql-server -y
