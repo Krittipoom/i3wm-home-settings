@@ -3,6 +3,7 @@ alias addalias='nano ~/.bash_aliases'
 alias upall='sudo apt update && sudo apt upgrade -y && sudo apt-get update && sudo apt-get upgrade && sudo snap refresh'
 alias fixup='ps aux | grep -i apt && sudo ~/Downloads/aptsources-cleanup.pyz && sudo rm /var/lib/apt/lists/lock'
 alias helpkey='man xkeyboard-config'
+alias copy='xclip -selection clipboard'
 
 alias updatetime='bash ~/.updatetime'
 
