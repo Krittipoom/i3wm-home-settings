@@ -1,5 +1,7 @@
 # movepackage
 mv ./ubuntu-setup/*.deb ./
+mv ./ubuntu-setup/.updatetime ./
+mv ./ubuntu-setup/.bash_aliases ./
 
 # curl
 sudo apt install curl -y
@@ -44,7 +46,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # docker desktop
 sudo apt install gnome-terminal
 sudo apt-get update
-#sudo apt-get install ./docker-desktop-4.22.1-amd64.deb -y
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.22.1-amd64.deb
+sudo apt-get install ./docker-desktop-4.22.1-amd64.deb -y
 
 # Python3.9 (deadsnake)
 sudo apt install software-properties-common -y
