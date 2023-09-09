@@ -1,4 +1,4 @@
- sudo apt update -y && sudo apt upgrade -y
+sudo apt update -y && sudo apt upgrade -y
 
 # movepackage
 mv ./ubuntu-setup/*.deb ./
