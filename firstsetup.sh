@@ -1,7 +1,6 @@
 sudo apt update -y && sudo apt upgrade -y
 
 # movepackage
-mv ./ubuntu-setup/*.deb ./
 mv ./ubuntu-setup/.updatetime ./
 mv ./ubuntu-setup/.bash_aliases ./
 
@@ -73,7 +72,9 @@ wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb -y
 
 # Vktablet
-sudo apt install ./vktablet-1.0.3-3-x86_64.deb -y
+wget https://veikk.com/image/catalog/Software/new/vktablet-1.2.4-10-x86_64.zip
+tar -xf vktablet-1.2.4-10-x86_64.zip
+sudo apt install ./vktablet-1.2.4-10-x86_64.deb -y
 
 # mysql
 sudo apt install mysql-server -y
