@@ -26,5 +26,6 @@ bash firstsetup.sh
 - sublime text 4
 - ulauncher
 - vktablet
+- xapp
 - zoom
 - my .bash_aliases

@@ -19,3 +19,4 @@ bash installer/sublime-text.sh
 bash installer/zoom.sh
 bash installer/vktablet.sh
 bash installer/mysql.sh
+bash installer/xapp.sh
