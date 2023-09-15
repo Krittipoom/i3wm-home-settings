@@ -20,3 +20,6 @@ bash installer/zoom.sh
 bash installer/vktablet.sh
 bash installer/mysql.sh
 bash installer/xapp.sh
+bash installer/cleanup.sh
+bash installer/dbvisualizer.sh
+
