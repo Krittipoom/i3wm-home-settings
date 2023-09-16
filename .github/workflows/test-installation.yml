@@ -13,12 +13,16 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name: Check Directory
+      run: |
+        ls -al
+
     - name: Run Install Test
       run: |
-        bash ubuntu-setup/test_script/install.sh
+        bash test_script/install.sh
         continue-on-error: true
 
     - name: Run Apt List Test
       run: |
-        bash ubuntu-setup/test_script/aptlist.sh
+        bash test_script/aptlist.sh
         continue-on-error: true
