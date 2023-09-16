@@ -7,12 +7,12 @@ git clone https://github.com/Krittipoom/ubuntu-setup.git
 
 Config (optional)
 ```
-nano firstsetup.sh
+nano ./ubuntu-setup/firstsetup.sh
 ```
 
 Run First time setup
 ```
-bash firstsetup.sh
+bash ./ubuntu-setup/firstsetup.sh
 ```
 
 ## Installer include command to install these:
