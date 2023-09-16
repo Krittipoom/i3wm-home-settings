@@ -13,16 +13,42 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name: Check Directory
+    - name: Run apt update and upgrade
       run: |
-        ls -al
+        sudo apt update -y && sudo apt upgrade -y
 
-    - name: Run Install Test
+    - name: Test git and gh installer
       run: |
-        bash test_script/install.sh
-        continue-on-error: true
+        bash installer/git-and-gh.sh
+
+    - name: Test ulauncher installer
+      run: |
+        bash installer/ulauncher.sh
+
+    - name: Test alacarte installer
+      run: |
+        bash installer/alacarte.sh
+
+    - name: Test Python39 and pip installer
+      run: |
+        bash installer/python39-deadsnake-and-pip.sh
+
+    - name: Test Sublime Text 4 installer
+      run: |
+        bash installer/sublime-text.sh
+
+    - name: Test Zoom installer
+      run: |
+        bash installer/zoom.sh
+
+    - name: Test MySQL installer
+      run: |
+        bash installer/mysql.sh
+
+    - name: Test Xapp installer
+      run: |
+        bash installer/xapp.sh
 
     - name: Run Apt List Test
       run: |
         bash test_script/aptlist.sh
-        continue-on-error: true
