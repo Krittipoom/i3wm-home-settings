@@ -17,3 +17,18 @@ jobs:
       run: |
         git clone https://github.com/Krittipoom/ubuntu-setup.git
         bash ubuntu-setup/firstsetup.sh
+        continue-on-error: true
+
+    - name: Check Apt List
+      run: |
+        apt list alacarte
+        apt list gh
+        apt list git
+        apt list mysql-client*
+        apt list python3.9
+        apt list sublime-text
+        apt list ulauncher
+        apt list vlc
+        apt list xapp
+        apt list zoom
+        ls -al
