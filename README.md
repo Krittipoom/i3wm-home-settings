@@ -17,20 +17,19 @@ bash ./ubuntu-setup/firstsetup.sh
 
 ## Installer include command to install these:
 
-- alarcarte
-- aptsources-cleanup
-- dbvisualizer
-- docker engine and desktop
+- alacarte
 - git and gh
-- microsoft-edge
 - mysql
 - python3.9 and pip
-- steam
 - sublime text 4
 - ulauncher
-- updatetime
-- vktablet
 - vlc
 - xapp
 - zoom
 - my .bash_aliases
+
+## Optional
+- dbvisualizer
+- docker desktop
+- steam
+- microsoft edge

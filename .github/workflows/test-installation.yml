@@ -13,22 +13,12 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name: Run Setup
+    - name: Run Install Test
       run: |
-        git clone https://github.com/Krittipoom/ubuntu-setup.git
-        bash ubuntu-setup/firstsetup.sh
+        bash ubuntu-setup/test_script/install.sh
         continue-on-error: true
 
-    - name: Check Apt List
+    - name: Run Apt List Test
       run: |
-        apt list alacarte
-        apt list gh
-        apt list git
-        apt list mysql-client*
-        apt list python3.9
-        apt list sublime-text
-        apt list ulauncher
-        apt list vlc
-        apt list xapp
-        apt list zoom
-        ls -al
+        bash ubuntu-setup/test_script/aptlist.sh
+        continue-on-error: true

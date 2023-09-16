@@ -1,14 +1,7 @@
 sudo apt update -y && sudo apt upgrade -y
 
-# movepackage
-mv ./ubuntu-setup/.updatetime ./
-mv ./ubuntu-setup/.bash_aliases ./
-mv ./ubuntu-setup/installer ./
-
-# curl
 sudo apt install curl -y
 
-# install
 bash installer/git-and-gh.sh
 bash installer/ulauncher.sh
 bash installer/alarcarte.sh
