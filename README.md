@@ -18,6 +18,8 @@ bash firstsetup.sh
 ## Installer include command to install these:
 
 - alarcarte
+- aptsources-cleanup
+- dbvisualizer
 - docker engine and desktop
 - git and gh
 - microsoft-edge
@@ -25,6 +27,7 @@ bash firstsetup.sh
 - python3.9 and pip
 - sublime text 4
 - ulauncher
+- updatetime
 - vktablet
 - vlc
 - xapp
