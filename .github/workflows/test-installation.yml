@@ -1,0 +1,19 @@
+name: Test Ubuntu Setup
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Run Setup
+      run: |
+        git clone https://github.com/Krittipoom/ubuntu-setup.git
+        bash ubuntu-setup/firstsetup.sh
