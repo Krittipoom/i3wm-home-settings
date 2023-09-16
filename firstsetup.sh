@@ -22,4 +22,4 @@ bash installer/mysql.sh
 bash installer/xapp.sh
 bash installer/cleanup.sh
 bash installer/dbvisualizer.sh
-
+bash installer/vlc.sh
