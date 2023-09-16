@@ -25,6 +25,7 @@ bash firstsetup.sh
 - microsoft-edge
 - mysql
 - python3.9 and pip
+- steam
 - sublime text 4
 - ulauncher
 - updatetime

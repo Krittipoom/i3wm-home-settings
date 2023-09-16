@@ -23,3 +23,4 @@ bash installer/xapp.sh
 bash installer/cleanup.sh
 bash installer/dbvisualizer.sh
 bash installer/vlc.sh
+bash installer/steam.sh
