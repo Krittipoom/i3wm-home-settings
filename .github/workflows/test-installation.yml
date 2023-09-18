@@ -15,7 +15,7 @@ jobs:
 
     - name: Run apt update and upgrade
       run: |
-        sudo apt update -y && sudo apt upgrade -y
+        sudo apt update -y 2>/dev/null | grep packages | cut -d '.' -f 1 && sudo apt upgrade -y 2>/dev/null | grep packages | cut -d '.' -f 1
 
     - name: Test git and gh installer
       run: |

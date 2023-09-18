@@ -10,7 +10,7 @@ alias updatetime='bash ~/.updatetime'
 # navigate
 alias cls='clear'
 alias dir='ls -l'
-alias pdf='xdg-open'
+alias open='xdg-open'
 
 # guide
 alias guideremove='echo -e "\nsudo apt-get remove the-app-name\ncd /etc/apt/sources.list.d\nsudo rm the-app-file\n"'
