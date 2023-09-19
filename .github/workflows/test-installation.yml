@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test-setup:
+  test-installation:
     runs-on: ubuntu-latest
 
     steps:
@@ -61,6 +61,17 @@ jobs:
       run: |
         bash installer/docker-engine-and-desktop.sh
 
+    - name: Test SQLite Browser installer
+      run: |
+        bash installer/sqlitebrowser.sh
+
+    - name: setup python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
     - name: Run Apt List Test
       run: |
-        bash .github/workflows/test_script/aptlist.sh
+        python .github/workflows/test_script/aptlist-check.py
+        pwd
+        ls -a
