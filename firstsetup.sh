@@ -1,8 +1,8 @@
 sudo apt update -y && sudo apt upgrade -y
 
 # movepackage
-mv ./ubuntu-setup/.updatetime ./
-mv ./ubuntu-setup/.bash_aliases ./
+mv ./ubuntu-setup/installer/.updatetime ./
+mv ./ubuntu-setup/installer/.bash_aliases ./
 mv ./ubuntu-setup/installer ./
 
 # curl

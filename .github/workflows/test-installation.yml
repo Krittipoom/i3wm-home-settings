@@ -49,6 +49,10 @@ jobs:
       run: |
         bash installer/xapp.sh
 
+    - name: Test Docker installer
+      run: |
+        bash installer/docker-engine-and-desktop.sh
+
     - name: Run Apt List Test
       run: |
-        bash test_script/aptlist.sh
+        bash .github/workflows/test_script/aptlist.sh
