@@ -20,6 +20,7 @@ bash ./ubuntu-setup/firstsetup.sh
 - alacarte
 - git and gh
 - mysql
+- obs-studio
 - python3.9 and pip
 - sublime text 4
 - ulauncher

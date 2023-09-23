@@ -57,13 +57,13 @@ jobs:
       run: |
         bash installer/xapp.sh
 
-    - name: Test Docker installer
-      run: |
-        bash installer/docker-engine-and-desktop.sh
-
     - name: Test SQLite Browser installer
       run: |
         bash installer/sqlitebrowser.sh
+
+    - name: Test obs-studio installer
+      run: |
+        bash installer/obs-studio.sh
 
     - name: setup python
       uses: actions/setup-python@v4

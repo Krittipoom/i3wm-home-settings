@@ -12,6 +12,7 @@ sudo apt install curl -y
 bash installer/git-and-gh.sh
 bash installer/ulauncher.sh
 bash installer/alarcarte.sh
+bash installer/obs-studio.sh
 bash installer/python39-deadsnake-and-pip.sh
 bash installer/sublime-text.sh
 bash installer/zoom.sh
