@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 sudo dpkg --add-architecture i386 -y
 sudo apt update && sudo apt upgrade --fix-missing -y
 sudo apt install libgl1-mesa-dri:i386 libgl1-mesa-glx:i386 -y
