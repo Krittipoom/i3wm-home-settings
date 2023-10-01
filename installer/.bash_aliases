@@ -19,3 +19,6 @@ alias guideremove='echo -e "\nsudo apt-get remove the-app-name\ncd /etc/apt/sour
 alias py='python3.9'
 alias activatevenv='. ./venv/bin/activate'
 alias runserver='py manage.py runserver'
+
+# developer (docker)
+alias guidenetstat='echo "sudo netstat -nlp | grep PORT"'
