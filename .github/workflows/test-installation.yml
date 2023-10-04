@@ -7,82 +7,72 @@ on:
 
 jobs:
   test-installation:
+    if: "!contains(github.event.head_commit.message, 'installtestneed')"
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name: Check Commit Message and Run Workflow
+    - name: Run apt update and upgrade
       run: |
-        COMMIT_MESSAGE=$(git log -1 --pretty=%B)
-        if [[ $COMMIT_MESSAGE != *installtestneed* ]]; then
-          echo "Commit message does not contain 'installtestneed', skipping the workflow."
-          exit 0
-
-        else
-
-          - name: Run apt update and upgrade
-            run: |
-              sudo apt update -y 2>/dev/null | grep packages | cut -d '.' -f 1 && sudo apt upgrade -y 2>/dev/null | grep packages | cut -d '.' -f 1
-
-          - name: Test git and gh installer
-            run: |
-              bash installer/git-and-gh.sh
-
-          - name: Test Microsoft edge installer
-            run: |
-              bash installer/microsoft-edge.sh
-
-          - name: Test ulauncher installer
-            run: |
-              bash installer/ulauncher.sh
-
-          - name: Test alacarte installer
-            run: |
-              bash installer/alacarte.sh
-
-          - name: Test Python39 and pip installer
-            run: |
-              bash installer/python39-deadsnake-and-pip.sh
-
-          - name: Test Cleanup pyz installer
-            run: |
-              bash installer/cleanup.sh
-
-          - name: Test Sublime Text 4 installer
-            run: |
-              bash installer/sublime-text.sh
-
-          - name: Test Zoom installer
-            run: |
-              bash installer/zoom.sh
-
-          - name: Test MySQL installer
-            run: |
-              bash installer/mysql.sh
-
-          - name: Test Xapp installer
-            run: |
-              bash installer/xapp.sh
-
-          - name: Test SQLite Browser installer
-            run: |
-              bash installer/sqlitebrowser.sh
-
-          - name: Test obs-studio installer
-            run: |
-              bash installer/obs-studio.sh
-
-          - name: setup python
-            uses: actions/setup-python@v4
-            with:
-              python-version: '3.10'
-
-          - name: Run Apt List Test
-            run: |
-              python .github/workflows/test_script/aptlist-check.py
-              pwd
-              ls -a
-              
-        fi
+        sudo apt update -y 2>/dev/null | grep packages | cut -d '.' -f 1 && sudo apt upgrade -y 2>/dev/null | grep packages | cut -d '.' -f 1
+      
+    - name: Test git and gh installer
+      run: |
+        bash installer/git-and-gh.sh
+      
+    - name: Test Microsoft edge installer
+      run: |
+        bash installer/microsoft-edge.sh
+      
+    - name: Test ulauncher installer
+      run: |
+        bash installer/ulauncher.sh
+      
+    - name: Test alacarte installer
+      run: |
+        bash installer/alacarte.sh
+      
+    - name: Test Python39 and pip installer
+      run: |
+        bash installer/python39-deadsnake-and-pip.sh
+      
+    - name: Test Cleanup pyz installer
+      run: |
+        bash installer/cleanup.sh
+      
+    - name: Test Sublime Text 4 installer
+      run: |
+        bash installer/sublime-text.sh
+      
+    - name: Test Zoom installer
+      run: |
+        bash installer/zoom.sh
+      
+    - name: Test MySQL installer
+      run: |
+        bash installer/mysql.sh
+      
+    - name: Test Xapp installer
+      run: |
+        bash installer/xapp.sh
+      
+    - name: Test SQLite Browser installer
+      run: |
+        bash installer/sqlitebrowser.sh
+      
+    - name: Test obs-studio installer
+      run: |
+        bash installer/obs-studio.sh
+      
+    - name: setup python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+      
+    - name: Run Apt List Test
+      run: |
+        python .github/workflows/test_script/aptlist-check.py
+        pwd
+        ls -a
