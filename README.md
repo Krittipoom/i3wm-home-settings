@@ -2,7 +2,7 @@
 
 Copy-and-paste in terminal to clone this repository.
 ```
-git clone https://github.com/Krittipoom/ubuntu-setup.git
+git clone https://github.com/kritserv/ubuntu-setup.git
 ```
 
 Config (optional)
