@@ -1,8 +1,10 @@
 #!/usr/bin/bash
+
 sudo apt update -y && sudo apt upgrade -y
 
 # movepackage
 mv ./ubuntu-setup/installer/.updatetime ./
+mv ./ubuntu-setup/installer/.venvactivator ./
 mv ./ubuntu-setup/installer/.bash_aliases ./
 mv ./ubuntu-setup/installer ./
 
