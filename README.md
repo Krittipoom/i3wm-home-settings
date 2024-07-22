@@ -1,1 +1,1 @@
-# My Ubuntu configuration
+# My i3wm Linux Mint Setup
