@@ -1,24 +1,63 @@
 #!/usr/bin/bash
 
-sudo apt update -y && sudo apt upgrade -y
+sudo su
 
-# movepackage
-mv ./ubuntu-setup/installer/.updatetime ./
-mv ./ubuntu-setup/installer/.venvactivator ./
-mv ./ubuntu-setup/installer/.bash_aliases ./
-mv ./ubuntu-setup/installer ./
+# Wallpaper
 
-# curl
-sudo apt install curl -y
+apt-get install compton -y
+echo -e 'backend = "glx";\n\nblur-background = true;\nblur-background-frame = true;\nblur-background-fixed = true;\n\nblur-kern = "3x3box";\nblur-method = "dual_kawase";\nblur-strength = 5;' > ~/.compton.conf
+apt install feh -y
+mkdir ~/Pictures/backgrounds
+curl "https://images.alphacoders.com/868/868263.png" -o "wallpaper.png"
+mv wallpaper.png ~/Pictures/backgrounds/
 
-# install
-bash installer/git-and-gh.sh
-bash installer/ulauncher.sh
-bash installer/alarcarte.sh
-bash installer/obs-studio.sh
-bash installer/python39-deadsnake-and-pip.sh
-bash installer/sublime-text.sh
-bash installer/zoom.sh
-bash installer/mysql.sh
-bash installer/xapp.sh
-bash installer/vlc.sh
+# Dark Mode
+
+echo -e "[Settings]\ngtk-application-prefer-dark-theme=1" > ~/.config/gtk-3.0/settings.ini
+
+# i3 status
+
+echo -e 'general {\n        colors = false\n        interval = 5\n}\n\n\norder += "battery all"\norder += "disk /"\norder += "tztime local"\n\nbattery all {\n        format = "BAT %percentage"\n}\n\ndisk "/" {\n        format = "DISK %avail"\n}\n\ntztime local {\n        format = "%Y/%m/%d %H:%M"\n}' > ~/.i3status.conf
+
+# Micro
+
+apt install micro -y
+echo -e '{\n"Alt-/": "lua:comment.comment",\n"CtrlUnderscore": "lua:comment.comment"\n}' > ~/.config/micro.bindings.json
+echo -e '{\n"colorscheme": "cmc-16",\n"keepautoindent": true,\n"softwrap": true\n}' > ~/.config/micro/settings.json
+mkdir ~/.config/xfce4/terminal/colorschemes
+echo -e '[Scheme]\nName=NewColor\nColorForeground=#a1a1a1\nColorBackground=#1f1b1b\nTabActivityColor=#878349\nColorCursor=#5eada5\nColorSelection=#848550\nColorPalette=#000000;#6e0000;#085c00;rgb(170,85,0);rgb(0,0,170);rgb(170,0,170);rgb(0,138,138);rgb(170,170,170);rgb(85,85,85);rgb(255,85,85);rgb(85,255,85);rgb(196,160,0);rgb(85,85,255);rgb(255,85,255);rgb(68,204,204);rgb(255,255,255)' > ~/.config/xfce4/terminal/colorschemes/newcolor
+
+# Git
+
+apt install gh -y
+apt install git -y
+
+# Python
+
+apt install python3-pip -y
+
+# VLC
+
+apt install vlc -y
+
+# Ulauncher
+
+add-apt-repository universe -y && add-apt-repository ppa:agornostal/ulauncher -y && apt update && apt install ulauncher -y
+
+# Zed
+
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+   source ~/.bashrc
+curl -f https://zed.dev/install.sh | sh
+
+# Skype
+
+apt install skypeforlinux -y
+
+# Mini fetch
+
+git clone https://github.com/nic68/minifetch
+
+# Matrix
+
+apt install cmatrix -y
