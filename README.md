@@ -23,9 +23,9 @@ mkdir ~/Pictures/backgrounds
 curl "https://images.alphacoders.com/868/868263.png" -o "wallpaper.png"
 mv ~/wallpaper.png ~/Pictures/backgrounds/
 
-# Dark Mode
+# Brightness control
 
-echo -e "[Settings]\ngtk-application-prefer-dark-theme=1" > ~/.config/gtk-3.0/settings.ini
+apt install brightnessctl -y
 
 # Micro
 
