@@ -6,10 +6,10 @@
 sudo su
 
 # Bash Aliases
-curl "https://raw.githubusercontent.com/kritserv/my-ubuntu-setup/main/.bash_aliases" -o ".bash_aliases"
+curl "https://raw.githubusercontent.com/kritserv/i3wm-linux-mint-setup/main/.bash_aliases" -o ".bash_aliases"
 
 # i3 Config
-curl "https://raw.githubusercontent.com/kritserv/my-ubuntu-setup/main/config" -o "config"
+curl "https://raw.githubusercontent.com/kritserv/i3wm-linux-mint-setup/main/config" -o "config"
 rm ~/.config/i3/config
 mv ~/config ~/.config/i3/config
 
@@ -44,6 +44,11 @@ apt install git -y
 # Python
 
 apt install python3-pip -y
+
+# Sqlitebrowser
+
+apt-get install sqlitebrowser -y
+
 
 # VLC
 

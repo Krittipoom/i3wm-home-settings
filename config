@@ -231,7 +231,7 @@ exec_always feh --bg-fill $HOME/Pictures/backgrounds/wallpaper.png
 
 # Extra shortkeys
 bindsym $mod+ctrl+t exec thunar
-bindsym $mod+ctrl+e exec ./Documents/waterfox/waterfox
-bindsym $mod+ctrl+d exec dbbrowser
+bindsym $mod+ctrl+e exec firefox
+bindsym $mod+ctrl+d exec sqlitebrowser
 bindsym $mod+ctrl+k exec krita
-bindsym $mod+ctrl+s exec subl
+bindsym $mod+ctrl+s exec zed
