@@ -41,9 +41,13 @@ echo -e '[Scheme]\nName=NewColor\nColorForeground=#a1a1a1\nColorBackground=#1f1b
 apt install gh -y
 apt install git -y
 
-# Python
+# Python pip
 
 apt install python3-pip -y
+
+# GPU
+apt-get install -y libgl1-mesa-dev
+apt-get install -y libglib2.0-0
 
 # Sqlitebrowser
 
