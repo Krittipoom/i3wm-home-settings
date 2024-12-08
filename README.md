@@ -45,6 +45,10 @@ apt install git -y
 
 apt install python3-pip -y
 
+# JAVAC
+
+apt-get install openjdk-8-jdk -y
+
 # GPU
 apt-get install -y libgl1-mesa-dev
 apt-get install -y libglib2.0-0
