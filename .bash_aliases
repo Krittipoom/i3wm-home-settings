@@ -27,14 +27,13 @@ alias neofetch="python3 ~/minifetch/minifetch.py"
 alias cls="clear"
 alias dir="echo -e 'ls -al' && ls -al"
 
-## Browser
-alias w="./Documents/waterfox/waterfox"
-
 ## Programming
 alias py="python3"
 alias pm="echo -e 'py main.py' && python3 main.py"
 alias pg="echo -e 'pygbag' && pygbag"
 alias ghub="echo -e 'cd ~/Documents/ghub && ls' && cd ~/Documents/ghub && ls"
+alias kill5000='PID=$(lsof -ti :5000) && [ -n "$PID" ] && kill -9 $PID || echo "No process found on port 5000"'
+alias runonandroid="echo -e 'buildozer android debug deploy run logcat' && buildozer android debug deploy run logcat"
 
 ## Guide
 alias shb="echo && echo '#!usr/bin/bash' && echo && echo '#!usr/bin/bash' | copy"
